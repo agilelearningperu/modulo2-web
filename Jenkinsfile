@@ -1,6 +1,5 @@
 pipeline {
-
-   
+agent any
     stages {
         stage('Descargar fuentes') {
            steps {
