@@ -21,7 +21,7 @@ agent any
                     bat 'mvn verify'
                     step([$class: 'Publisher'])
         		}
-        
+        }
     }
 }
 
