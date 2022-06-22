@@ -17,7 +17,7 @@ agent any
 		
         stage('Pruebas Funcionales') {
         		echo 'Ejecutando pruebas funcionales ...'
-                    sh 'mvn -f modulo2-web/pom.xml verify'
+//                     sh 'mvn -f modulo2-web/pom.xml verify'
         }
     }
 }
