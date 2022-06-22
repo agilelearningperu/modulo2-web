@@ -14,22 +14,13 @@ agent any
                sh 'mvn -f modulo2-web/pom.xml clean compile'
            }
         }
-
-		
-		stage('Build') {
-			steps {
-				echo 'Generando build...'
-				sh 'mvn -f fuentes/pom.xml package -DskipTests=true'
-			}
-		}
 		
         stage('Pruebas Funcionales') {
         		echo 'Ejecutando pruebas funcionales ...'
         		dir('modulo2-web') {
-                    bat 'mvn test'
+                    bat 'mvn verify'
                     step([$class: 'Publisher'])
         		}
-	
         
     }
 }
