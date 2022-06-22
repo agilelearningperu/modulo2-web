@@ -11,16 +11,13 @@ agent any
         stage('Compilar') {
            steps {
                echo 'Compilando...'
-               sh 'mvn -f modulo2-web/pom.xml clean compile'
+               sh 'mvn -f modulo2-web/pom.xml clean'
            }
         }
 		
         stage('Pruebas Funcionales') {
         		echo 'Ejecutando pruebas funcionales ...'
-        		dir('modulo2-web') {
-                    bat 'mvn verify'
-                    step([$class: 'Publisher'])
-        		}
+                    sh 'mvn -f modulo2-web/pom.xml verify'
         }
     }
 }
