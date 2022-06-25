@@ -18,7 +18,7 @@ public class hooks {
     @Before
     public static void setUp() throws MalformedURLException {
         if (navegador.equals("chrome")){
-            System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver");
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
 			options.addArguments("--no-sandbox");
