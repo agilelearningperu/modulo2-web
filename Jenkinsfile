@@ -16,14 +16,14 @@ agent any
         stage('Compilar') {
            steps {
                echo 'Compilando...'
-               sh 'mvn --file modulo2-web/pom.xml clean'
+               sh 'mvn -f pom.xml clean'
            }
         }
 		
         stage('Pruebas Funcionales') {
          steps {
              echo 'Ejecutando pruebas funcionales ...'
-             sh 'mvn --file modulo2-web/pom.xml verify'
+             sh 'mvn -f pom.xml verify'
          }
 
         }
