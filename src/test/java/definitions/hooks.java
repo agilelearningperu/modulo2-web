@@ -22,7 +22,7 @@ public class hooks {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
 			options.addArguments("--no-sandbox");
-            driver = new RemoteWebDriver(new URL("http://localhost:9222/"),options);
+            driver = new RemoteWebDriver(new URL("http://0.0.0.0:9222"),options);
 //            driver = new ChromeDriver();
             driver.manage().window().maximize();
         }else if (navegador.equals("firefox")){
