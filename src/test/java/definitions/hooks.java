@@ -21,7 +21,7 @@ public class hooks {
             System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
-            driver = new RemoteWebDriver(new URL("http://localhost:3000/webdriver"),options);
+            driver = new RemoteWebDriver(new URL("http://localhost:3000"),options);
 //            driver = new ChromeDriver();
             driver.manage().window().maximize();
         }else if (navegador.equals("firefox")){
