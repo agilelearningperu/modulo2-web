@@ -26,7 +26,7 @@ public class util extends hooks {
         Date fecha= new Date();
         SimpleDateFormat formatofecha = new SimpleDateFormat("ddMMyyyy_HHmmssSSS");
 
-        String path = "D:\\ALP - Agile Learning Perú\\Cursos\\Proyectos\\modulo2-web\\target\\evidencias\\";
+        String path = "/var/jenkins_home/workspace/testing-web/target/evidencias/";
         String imagen = formatofecha.format(fecha)+"_screenshot.jpg";
 
         File file= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
